@@ -1,0 +1,134 @@
+<ion-header>
+  <ion-toolbar class="appBar">
+    <!-- <img slot="start" src="../../assets/images/iStudy12Logo.jpg"> -->
+    <ion-buttons slot="end">
+      <ion-button (click)="select()">
+        <ion-label style="margin-right: 8px;" class="colorWhite">Grade-10</ion-label>
+        <ion-icon size="small" class="colorWhite" name="caret-down-sharp"></ion-icon>
+      </ion-button>
+      <ion-button (click)="notification()">
+        <ion-icon class="colorWhite" name="notifications"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="div_card">
+    <ion-label class="day">Good Night</ion-label>
+    <ion-label class="uname">Guest</ion-label>
+
+  <div class="sub_head">
+    <div class="sub_sec">
+      <img src="../../assets/images/placeholder.png" class="sub_"/>
+      <ion-label class="lbl_">Maths</ion-label>
+    </div>
+    <div class="sub_sec">
+      <img src="../../assets/images/placeholder.png" class="sub_"/>
+      <ion-label class="lbl_">Chemistry</ion-label>
+    </div>
+    <div class="sub_sec">
+      <img src="../../assets/images/placeholder.png" class="sub_"/>
+      <ion-label class="lbl_">Biology</ion-label>
+    </div>
+    <div class="sub_sec" (click)="physics()">
+      <img src="../../assets/images/placeholder.png" class="sub_"/>
+      <ion-label class="lbl_">Physics</ion-label>
+    </div>
+  </div>
+  </div>
+
+  <ion-slides pager="true" loop="true" [options]="sliderOptions" class="home-slides">
+      <ion-slide >
+        <img src="../../assets/images/placeholder.png" class="slide-pic">
+      </ion-slide>
+      <ion-slide>
+        <img src="../../assets/images/placeholder.png" class="slide-pic">
+      </ion-slide>
+      <ion-slide>
+        <img src="../../assets/images/placeholder.png" class="slide-pic">
+      </ion-slide>
+      <ion-slide>
+        <img src="../../assets/images/placeholder.png" class="slide-pic">
+      </ion-slide>
+    </ion-slides>
+
+  <ion-row class="row_sec">
+    <ion-col size="9" class="col_">
+      <ion-label class="recommend">Recommended Videos</ion-label>
+    </ion-col>
+    <ion-col size="3" class="col_ right_" (click)="view()">
+      <ion-label class="all">View All</ion-label>
+    </ion-col>
+  </ion-row>
+
+<div class="div_scroll">
+  <div class="videos_card">
+    <img src="../../assets/images/placeholder.png" class="thumbnail"/>
+    <ion-label class="lbl_vid">Fundamental Forces in Nature, Fundamental Forces in Nature</ion-label>
+  </div>
+  <div class="videos_card">
+    <img src="../../assets/images/placeholder.png" class="thumbnail"/>
+    <ion-label class="lbl_vid">Fundamental Forces in Nature</ion-label>
+  </div>
+  <div class="videos_card">
+    <img src="../../assets/images/placeholder.png" class="thumbnail"/>
+    <ion-label class="lbl_vid">Fundamental Forces in Nature</ion-label>
+  </div>
+  <div class="videos_card">
+    <img src="../../assets/images/placeholder.png" class="thumbnail"/>
+    <ion-label class="lbl_vid">Fundamental Forces in Nature</ion-label>
+  </div>
+  <div class="videos_card">
+    <img src="../../assets/images/placeholder.png" class="thumbnail"/>
+    <ion-label class="lbl_vid">Fundamental Forces in Nature</ion-label>
+  </div>
+  <div class="videos_card">
+    <img src="../../assets/images/placeholder.png" class="thumbnail"/>
+    <ion-label class="lbl_vid">Fundamental Forces in Nature</ion-label>
+  </div>
+</div>
+
+  <ion-row class="row_sec">
+    <ion-col size="9" class="col_">
+      <ion-label class="recommend">Recommended Documents</ion-label>
+    </ion-col>
+    <ion-col size="3" class="col_ right_" (click)="view()">
+      <ion-label class="all">View All</ion-label>
+    </ion-col>
+  </ion-row>
+
+  <div class="div_scroll">
+    <div class="doc_card">
+      <img src="../../assets/images/placeholder.png" class="thumbnail"/>
+      <ion-label class="lbl_vid">Fundamental Forces in Nature</ion-label>
+    </div>
+    <div class="doc_card">
+      <img src="../../assets/images/placeholder.png" class="thumbnail"/>
+      <ion-label class="lbl_vid">Fundamental Forces in Nature</ion-label>
+    </div>
+    <div class="doc_card">
+      <img src="../../assets/images/placeholder.png" class="thumbnail"/>
+      <ion-label class="lbl_vid">Fundamental Forces in Nature</ion-label>
+    </div>
+    <div class="doc_card">
+      <img src="../../assets/images/placeholder.png" class="thumbnail"/>
+      <ion-label class="lbl_vid">Fundamental Forces in Nature</ion-label>
+    </div>
+    <div class="doc_card">
+      <img src="../../assets/images/placeholder.png" class="thumbnail"/>
+      <ion-label class="lbl_vid">Fundamental Forces in Nature</ion-label>
+    </div>
+    <div class="doc_card">
+      <img src="../../assets/images/placeholder.png" class="thumbnail"/>
+      <ion-label class="lbl_vid">Fundamental Forces in Nature</ion-label>
+    </div>
+  </div>
+
+  <div class="div_shr">
+    <img src="../../assets/images/placeholder.png" class="shr_img"/>
+    <ion-button size="small" shape="round">share</ion-button>
+  </div>
+
+</ion-content>

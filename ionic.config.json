@@ -1,5 +1,7 @@
 {
   "name": "iStudy12",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

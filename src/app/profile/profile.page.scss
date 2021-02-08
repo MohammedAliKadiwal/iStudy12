@@ -1,0 +1,38 @@
+ion-content{
+    --padding-top: 16px;
+    --padding-bottom: 16px;
+    --padding-start: 16px;
+    --padding-end: 16px;
+
+    .gender{
+        margin: 32px 0px 8px 0px;
+        display: block;
+    }
+
+    .radio_group{
+        .row_{
+            margin-bottom: 16px;
+            .col_{
+                text-align: center;
+                .div_radio{
+                    display: inline-block;
+                .img_{
+
+                }
+                .lblG{
+                    display: block;
+                }
+                }
+                .radio_{
+
+                }
+                
+            }
+        }
+    }
+    .btn_{
+        margin: 0px;
+        margin: 32px 0px 16px 0px;
+        text-transform: uppercase;
+    }
+}

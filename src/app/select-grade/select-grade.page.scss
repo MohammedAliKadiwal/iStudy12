@@ -1,0 +1,19 @@
+ion-content{
+    .div_grade{
+        box-shadow: 0px 4px 18px #ccc;
+        margin: 8px;
+        padding: 14px 12px;
+        .lbl_medium{
+            display: block;
+            font-size: 18px;
+            margin: 0 0 20px 0;
+        }
+        .lbl_grade{
+            font-size: 17px;
+            background: var(--ion-color-primary);
+            color: white;
+            padding: 8px;
+            border-radius: 8px;
+        }
+    }
+}

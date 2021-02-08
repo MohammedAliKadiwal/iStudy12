@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar class="appBar">
+    <ion-title class="colorWhite size_" mode="md">Practice</ion-title>
+  </ion-toolbar>
+  <ion-toolbar class="ext">
+    <div class="div_seg">
+    <ion-segment [(ngModel)]="subjects" mode="md" class="seg_">
+      <ion-segment-button value="maths" class="seg_btn">
+        Maths
+      </ion-segment-button>
+      <ion-segment-button value="chemistry" class="seg_btn">
+        Chemistry
+      </ion-segment-button>
+      <ion-segment-button value="biology" class="seg_btn">
+        Biology
+      </ion-segment-button>
+      <ion-segment-button value="physics" class="seg_btn">
+        Physics
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div [ngSwitch]="subjects">
+
+      <div *ngSwitchCase="'maths'">
+        Maths
+      </div>
+
+      <div *ngSwitchCase="'chemistry'">
+        Chemistry
+      </div>
+
+      <div *ngSwitchCase="'biology'">
+        Biology
+      </div>
+
+      <div *ngSwitchCase="'physics'">
+        Physics
+      </div>
+
+  </div>
+
+</ion-content>

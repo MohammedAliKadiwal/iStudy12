@@ -1,0 +1,122 @@
+ion-content{
+    .div_card{
+        height: 180px;
+        background: var(--ion-color-primary);
+        border-bottom-left-radius: 24px;
+        border-bottom-right-radius: 24px;
+        .day{
+            display: block;
+            font-weight: bold;
+            text-align: left;
+            padding: 0px 0px 0px 16px;
+            color: var(--ion-color-secondary);
+        }
+        .uname{
+            display: block;
+            font-weight: bold;
+            text-align: left;
+            padding: 0px 0px 0px 16px;
+            color: var(--ion-color-primary-contrast);
+        }
+        .sub_head{
+            margin: 40px 0px 0px 12px;
+            .sub_sec{
+            width: 70px;
+            display: inline-block;
+            text-align: center;
+            .sub_{
+                height: 50px;
+                width: 50px;
+                border-radius: 100%;
+            }
+            .lbl_{
+                display: block;
+                font-size: 13px;
+                color: var(--ion-color-primary-contrast);
+            }
+        }
+        }
+    }
+    .home-slides{
+        height: 216px; 
+        width: 100%;
+        .slide-pic{
+            height: 170px; 
+            width: 100%; 
+            margin: 0px 12px 16px 12px;
+            object-fit: cover;
+            border-radius: 16px;
+            box-shadow: 0 4px 16px #ccc;
+        }
+    }
+    .row_sec{
+        .col_{
+            padding: 8px;
+            margin-top: auto;
+            margin-bottom: auto;
+            .recommend{
+                font-weight: bold;
+                font-size: 18px;
+                // margin: 8px;
+            }
+            .all{
+                font-size: 14px;
+                // float: right;
+                // margin: 8px;
+            }
+        }
+    }
+    .div_scroll{
+        overflow-x: scroll;
+        white-space: nowrap;
+        .videos_card{
+            width: 40%;
+            display: inline-block;
+            margin: 8px;
+            .thumbnail{
+                height: 100px;
+                width: 100%;
+                border-radius: 16px;
+                object-fit: cover;
+                box-shadow: 0 4px 16px #ccc;
+            }
+            .lbl_vid{
+                font-size: 12px;
+                padding: 8px;
+                display: block;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;            
+            }
+        }
+        .doc_card{
+            width: 28%;
+            display: inline-block;
+            margin: 4px;
+            .thumbnail{
+                height: 100px;
+                width: 100%;
+                border-radius: 16px;
+                object-fit: cover;
+                box-shadow: 0 4px 16px #ccc;
+            }
+            .lbl_vid{
+                font-size: 12px;
+                padding: 8px;
+                display: block;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+            }
+        }
+    }
+    .div_shr{
+        .shr_img{
+            width: 100%;
+            height: 100px;
+            object-fit: cover;
+        }
+    }
+}

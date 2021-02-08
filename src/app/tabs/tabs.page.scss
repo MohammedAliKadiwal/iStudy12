@@ -1,0 +1,14 @@
+.tab_bar{
+    // --background: var(--ion-color-primary);
+    height: 68px;
+    border-top: 3px solid var(--ion-color-light);
+    .tab_icons{
+        font-size: 24px;
+    }
+    .tab_lbl{
+        padding-top: 6px;
+        font-size: 14px;
+        font-weight: bold;
+        // color: var(--ion-color-secondary-contrast);
+    }
+}

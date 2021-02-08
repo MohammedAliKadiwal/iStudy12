@@ -1,0 +1,21 @@
+ion-header{
+    .div_seg{
+        background: var(--ion-color-primary);
+        padding: 0px 16px;
+        width: 100%;
+        .seg_{
+            padding: 0px 16px;
+            .seg_btn{
+                font-weight: bold;
+                --color:  var(--ion-color-primary-contrast);
+                --color-checked: var(--ion-color-secondary);
+                --indicator-color: var(--ion-color-secondary);
+                --indicator-height: 2px;
+                font-size: 14px;
+            }
+        }
+    }
+}
+ion-content{
+    
+}
