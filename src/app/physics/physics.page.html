@@ -120,7 +120,7 @@
           </ion-card-content>
         </ion-card> -->
 
-        <ion-list>
+        <!-- <ion-list>
           <div *ngFor="let d of data">
           <ion-item lines="none" class="details" (click)="toggleDetails(d)">
             <ion-icon color="primary" [name]="d.icon" slot="end"></ion-icon>
@@ -128,7 +128,19 @@
           </ion-item>
           <div *ngIf="d.showDetails" class="details">{{d.details}}</div>
         </div>
-        </ion-list>
+        </ion-list> -->
+
+        <ion-item lines="none" class="header" (click)="onChangeEmail()">
+          <ion-checkbox mode="md" style="display: none;"></ion-checkbox>
+          <ion-label>
+            Change Email
+          </ion-label>
+        </ion-item>
+        <div *ngIf="visabilityEmail">
+          <ion-label>name</ion-label>
+          <ion-label>email</ion-label>
+          <ion-label>pass</ion-label>
+        </div>
 
       </div>
 

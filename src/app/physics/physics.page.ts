@@ -15,6 +15,9 @@ export class PhysicsPage implements OnInit {
   ActiveTabes: any = "videos";
   currentTabs: any = "videos";
 
+  visabilityEmail :boolean = false;
+  isCheckedEmail : boolean = false;
+
   // itemExpanded: boolean = false
   // itemExpandHeight: number = 200;
 
@@ -55,6 +58,15 @@ export class PhysicsPage implements OnInit {
     } else {
       data.showDetails = true;
       data.icon = 'chevron-down';
+    }
+  }
+
+  onChangeEmail(){
+    if(this.isCheckedEmail  = !this.isCheckedEmail){
+      this.visabilityEmail = true;
+    }
+    else if(this.isCheckedEmail  == this.isCheckedEmail){
+      this.visabilityEmail = false;
     }
   }
 
