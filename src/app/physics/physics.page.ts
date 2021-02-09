@@ -36,7 +36,7 @@ export class PhysicsPage implements OnInit {
     this.navCtrl.pop();
   }
 
-  expandItem(item) {
-    item.expanded = !item.expanded;
-  }
+  // expandItem(item) {
+  //   item.expanded = !item.expanded;
+  // }
 }

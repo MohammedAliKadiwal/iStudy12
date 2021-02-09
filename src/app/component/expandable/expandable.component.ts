@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Renderer2 } from '@angular/core';
 
 @Component({
   selector: 'app-expandable',
@@ -7,18 +7,13 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ExpandableComponent implements OnInit {
 
-  @Input('expanded') expanded;
-  @Input('expandHeight') expandHeight;
+  @Input("expanded") expanded: boolean = false;
+  @Input("expandHeight") expandHeight: string = "150px";
 
   currentHeight: number = 0;
 
-  constructor() { }
+  constructor(public renderer: Renderer2) { }
 
   ngOnInit() {}
-
-  ngAfterViewInit() {
-    console.log(this.expanded);
-    console.log(this.expandHeight);
-  }
 
 }
