@@ -55,8 +55,8 @@
           </app-expandable>
         </div> -->
 
-        <!-- <ion-card class="card-main">
-          <ion-row class="row-card" (click)="expandItem(item)">
+        <!-- <ion-card class="card-main" *ngFor="let item of items">
+          <ion-row class="row-card" (click)="toggleDetails(d)">
             <ion-col size="10" class="col-lbl">
               <ion-label class="col-title">Bill no</ion-label>
               <ion-label class="col-value">Bill</ion-label>
@@ -71,7 +71,7 @@
             </ion-col>
           </ion-row>
           <ion-card-content class="main-card-content">
-            <app-expandable expandHeight="100px" [expanded]="item.expanded">
+            <app-expandable expandHeight="100px" expanded="item.expanded">
               <ion-row class="row-card">
                 <ion-col size="10" class="col-lbl">
                   <ion-label class="col-title">Client Name</ion-label>
@@ -119,6 +119,16 @@
             </app-expandable>
           </ion-card-content>
         </ion-card> -->
+
+        <ion-list>
+          <div *ngFor="let d of data">
+          <ion-item lines="none" class="details" (click)="toggleDetails(d)">
+            <ion-icon color="primary" [name]="d.icon" slot="end"></ion-icon>
+            {{d.title}}      
+          </ion-item>
+          <div *ngIf="d.showDetails" class="details">{{d.details}}</div>
+        </div>
+        </ion-list>
 
       </div>
 
