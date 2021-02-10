@@ -67,8 +67,8 @@ ion-content{
         }
     }
     .div_scroll{
-        overflow-x: scroll;
-        white-space: nowrap;
+        // overflow-x: scroll;
+        // white-space: nowrap;
         .videos_card{
             width: 40%;
             display: inline-block;
@@ -82,8 +82,10 @@ ion-content{
             }
             .lbl_vid{
                 font-size: 12px;
-                padding: 8px;
+                margin: 8px;
+                text-align: left;
                 display: block;
+                display: -webkit-box;
                 overflow: hidden;
                 text-overflow: ellipsis;
                 -webkit-line-clamp: 2;
@@ -103,12 +105,14 @@ ion-content{
             }
             .lbl_vid{
                 font-size: 12px;
-                padding: 8px;
+                margin: 8px;
+                text-align: left;
                 display: block;
+                display: -webkit-box;
                 overflow: hidden;
                 text-overflow: ellipsis;
                 -webkit-line-clamp: 2;
-                -webkit-box-orient: vertical;
+                -webkit-box-orient: vertical;   
             }
         }
     }

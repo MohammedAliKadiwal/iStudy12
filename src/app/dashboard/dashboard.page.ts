@@ -9,13 +9,47 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 })
 export class DashboardPage implements OnInit {
 
-  sliderOptions = {
-    zoom: false,
-    slidesPerView: 1,
-    loop: true,
-    autoplay: {
-      delay: 3000,
-    },
+  slideVideoOpts = {
+    // effect: 'coverflow',
+    // grabCursor: true,
+    // centeredSlides: true,
+    slidesPerView: 'auto',
+    freeMode: true,
+    spaceBetween: 1,
+    pager: false,
+    // coverflowEffect: {
+    //   rotate: 50,
+    //   stretch: 0,
+    //   depth: 100,
+    //   modifier: 1,
+    //   slideShadows : true,
+    // },
+    // autoplay: {
+    //   delay: 3000,
+    //   disableOnInteraction: false,
+    // },
+    loopFillGroupWithBlank: true,
+  };
+
+  slideDocOpts = {
+    // effect: 'coverflow',
+    // grabCursor: true,
+    // centeredSlides: true,
+    slidesPerView: 'auto',
+    freeMode: true,
+    spaceBetween: 1,
+    pager: false,
+    // coverflowEffect: {
+    //   rotate: 50,
+    //   stretch: 0,
+    //   depth: 100,
+    //   modifier: 1,
+    //   slideShadows : true,
+    // },
+    // autoplay: {
+    //   delay: 3000,
+    //   disableOnInteraction: false,
+    // },
     loopFillGroupWithBlank: true,
   };
 
