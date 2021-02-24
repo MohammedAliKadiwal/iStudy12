@@ -1,0 +1,37 @@
+.div_modal{
+    text-align: center;
+    padding: 8px 0 0 0;
+    .div_{
+        width: 18px;
+        height: 4px;
+        margin: auto;
+        border-radius: 8px;
+        background: var(--ion-color-light-shade);
+    }
+    .lbl_head{
+        display: block;
+        font-size: 18px;
+        font-weight: bold;
+        padding: 8px;
+        color: var(--ion-color-secondary-contrast);
+    }
+    .lbl_desc{
+        display: block;
+        font-size: 16px;
+        color: var(--ion-color-secondary-contrast);
+    }
+    .row_btns{
+        padding: 8px;
+        .col_btns{
+            .btn_resume{
+                font-weight: bold;
+                color: var(--ion-color-primary);
+                --background-activated: var(--ion-color-tertiary);
+            }
+            .btn_leave{
+                // font-weight: bold;
+                color: var(--ion-color-primary-contrast);
+            }
+        }
+    }
+}

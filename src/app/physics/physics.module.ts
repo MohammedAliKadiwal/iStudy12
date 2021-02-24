@@ -5,19 +5,17 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 
 import { PhysicsPageRoutingModule } from './physics-routing.module';
-
+import { MatExpansionModule } from '@angular/material/expansion';
 import { PhysicsPage } from './physics.page';
-// import { ExpandableModule } from '../component/expandable/expandable.module';
-import { ExpandableComponent } from '../component/expandable/expandable.component';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    // ExpandableModule,
+    MatExpansionModule,
     PhysicsPageRoutingModule
   ],
-  declarations: [PhysicsPage, ExpandableComponent]
+  declarations: [PhysicsPage]
 })
 export class PhysicsPageModule {}

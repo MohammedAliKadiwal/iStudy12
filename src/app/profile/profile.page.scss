@@ -1,37 +1,35 @@
 ion-content{
-    --padding-top: 16px;
+    --padding-top: 8px;
     --padding-bottom: 16px;
     --padding-start: 16px;
     --padding-end: 16px;
 
     .gender{
-        margin: 32px 0px 8px 0px;
+        margin: 16px 0px 8px 0px;
         display: block;
+        font-size: 14px;
     }
 
     .radio_group{
         .row_{
-            margin-bottom: 16px;
+            margin-bottom: 8px;
             .col_{
                 text-align: center;
                 .div_radio{
                     display: inline-block;
-                .img_{
-
-                }
+                // .img_{}
                 .lblG{
                     display: block;
+                    font-size: 14px;
                 }
                 }
-                .radio_{
-
-                }
+                // .radio_{}
                 
             }
         }
     }
     .btn_{
-        margin: 0px;
+        // font-weight: bold;
         margin: 32px 0px 16px 0px;
         text-transform: uppercase;
     }

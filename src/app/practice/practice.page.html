@@ -27,19 +27,27 @@
   <div [ngSwitch]="subjects">
 
       <div *ngSwitchCase="'maths'">
-        Maths
+        <div class="empty_">
+          <ion-label class="lbl_empty">Maths</ion-label>
+        </div>
       </div>
 
-      <div *ngSwitchCase="'chemistry'">
-        Chemistry
+      <div *ngSwitchCase="'chemistry'">        
+        <div class="empty_">
+          <ion-label class="lbl_empty">Chemistry</ion-label>
+        </div>
       </div>
 
       <div *ngSwitchCase="'biology'">
-        Biology
+        <div class="empty_">
+          <ion-label class="lbl_empty">Biology</ion-label>
+        </div>
       </div>
 
-      <div *ngSwitchCase="'physics'">
-        Physics
+      <div *ngSwitchCase="'physics'">        
+        <div class="empty_">
+          <ion-label class="lbl_empty">Physics</ion-label>
+        </div>
       </div>
 
   </div>

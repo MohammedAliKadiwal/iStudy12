@@ -1,0 +1,213 @@
+<ion-header>
+  <ion-toolbar class="appBar">
+    <ion-buttons slot="start">
+      <ion-button (click)="close()">
+        <ion-icon class="colorWhite" name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title mode="md" class="colorWhite">Summary</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="div_seg">
+    <ion-segment scrollable [(ngModel)]="subjects" mode="md" class="seg_">
+      <ion-segment-button value="all" class="seg_btn">
+        All
+      </ion-segment-button>
+      <ion-segment-button value="maths" class="seg_btn">
+        Maths
+      </ion-segment-button>
+      <ion-segment-button value="chemistry" class="seg_btn">
+        Chemistry
+      </ion-segment-button>
+      <ion-segment-button value="biology" class="seg_btn">
+        Biology
+      </ion-segment-button>
+      <ion-segment-button value="physics" class="seg_btn">
+        Physics
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+
+  <div [ngSwitch]="subjects">
+
+    <div *ngSwitchCase="'all'">
+
+      <canvas #pieChart></canvas>
+      
+      <div class="divItems">
+        <ion-item lines="none" class="items_">
+          <div slot="start" class="dotBig bgR"></div>
+          <ion-label class="lbl_">All Questions</ion-label>
+          <ion-label slot="end" class="total">75</ion-label>
+        </ion-item>
+        <ion-item lines="none" class="items_">
+          <div slot="start" class="dotBig bgW"></div>
+          <ion-label class="lbl_">Answered</ion-label>
+          <ion-label slot="end" class="total">28</ion-label>
+        </ion-item>
+        <ion-item lines="none" class="items_">
+          <div slot="start" class="dotBig bgS"></div>
+          <ion-label class="lbl_">Not Answered</ion-label>
+          <ion-label slot="end" class="total">9</ion-label>
+        </ion-item>
+        <ion-item lines="none" class="items_">
+          <div slot="start" class="dotBig bgR"></div>
+          <ion-label class="lbl_">Marked for Review</ion-label>
+          <ion-label slot="end" class="total">3</ion-label>
+        </ion-item>
+        <ion-item lines="none" class="items_">
+          <div slot="start" class="dotBig bgW"></div>
+          <ion-label class="lbl_">Answered and To Review</ion-label>
+          <ion-label slot="end" class="total">1</ion-label>
+        </ion-item>
+      </div>
+
+    </div>
+
+    <div *ngSwitchCase="'maths'">
+      
+      <!-- <div class="divItems">
+        <ion-item lines="none" class="items_">
+          <div slot="start" class="dotBig bgR"></div>
+          <ion-label class="lbl_">All Questions</ion-label>
+          <ion-label slot="end" class="total">75</ion-label>
+        </ion-item>
+        <ion-item lines="none" class="items_">
+          <div slot="start" class="dotBig bgW"></div>
+          <ion-label class="lbl_">Answered</ion-label>
+          <ion-label slot="end" class="total">28</ion-label>
+        </ion-item>
+        <ion-item lines="none" class="items_">
+          <div slot="start" class="dotBig bgS"></div>
+          <ion-label class="lbl_">Not Answered</ion-label>
+          <ion-label slot="end" class="total">9</ion-label>
+        </ion-item>
+        <ion-item lines="none" class="items_">
+          <div slot="start" class="dotBig bgR"></div>
+          <ion-label class="lbl_">Marked for Review</ion-label>
+          <ion-label slot="end" class="total">3</ion-label>
+        </ion-item>
+        <ion-item lines="none" class="items_">
+          <div slot="start" class="dotBig bgW"></div>
+          <ion-label class="lbl_">Answered and To Review</ion-label>
+          <ion-label slot="end" class="total">1</ion-label>
+        </ion-item>
+      </div> -->
+
+    </div>
+
+    <div *ngSwitchCase="'chemistry'">        
+      
+      <div class="divItems">
+        <ion-item lines="none" class="items_">
+          <div slot="start" class="dotBig bgR"></div>
+          <ion-label class="lbl_">All Questions</ion-label>
+          <ion-label slot="end" class="total">75</ion-label>
+        </ion-item>
+        <ion-item lines="none" class="items_">
+          <div slot="start" class="dotBig bgW"></div>
+          <ion-label class="lbl_">Answered</ion-label>
+          <ion-label slot="end" class="total">28</ion-label>
+        </ion-item>
+        <ion-item lines="none" class="items_">
+          <div slot="start" class="dotBig bgS"></div>
+          <ion-label class="lbl_">Not Answered</ion-label>
+          <ion-label slot="end" class="total">9</ion-label>
+        </ion-item>
+        <ion-item lines="none" class="items_">
+          <div slot="start" class="dotBig bgR"></div>
+          <ion-label class="lbl_">Marked for Review</ion-label>
+          <ion-label slot="end" class="total">3</ion-label>
+        </ion-item>
+        <ion-item lines="none" class="items_">
+          <div slot="start" class="dotBig bgW"></div>
+          <ion-label class="lbl_">Answered and To Review</ion-label>
+          <ion-label slot="end" class="total">1</ion-label>
+        </ion-item>
+      </div>
+
+    </div>
+
+    <div *ngSwitchCase="'biology'">
+      
+      <!-- <div class="divItems">
+        <ion-item lines="none" class="items_">
+          <div slot="start" class="dotBig bgR"></div>
+          <ion-label class="lbl_">All Questions</ion-label>
+          <ion-label slot="end" class="total">75</ion-label>
+        </ion-item>
+        <ion-item lines="none" class="items_">
+          <div slot="start" class="dotBig bgW"></div>
+          <ion-label class="lbl_">Answered</ion-label>
+          <ion-label slot="end" class="total">28</ion-label>
+        </ion-item>
+        <ion-item lines="none" class="items_">
+          <div slot="start" class="dotBig bgS"></div>
+          <ion-label class="lbl_">Not Answered</ion-label>
+          <ion-label slot="end" class="total">9</ion-label>
+        </ion-item>
+        <ion-item lines="none" class="items_">
+          <div slot="start" class="dotBig bgR"></div>
+          <ion-label class="lbl_">Marked for Review</ion-label>
+          <ion-label slot="end" class="total">3</ion-label>
+        </ion-item>
+        <ion-item lines="none" class="items_">
+          <div slot="start" class="dotBig bgW"></div>
+          <ion-label class="lbl_">Answered and To Review</ion-label>
+          <ion-label slot="end" class="total">1</ion-label>
+        </ion-item>
+      </div> -->
+
+    </div>
+
+    <div *ngSwitchCase="'physics'">        
+      
+      <div class="divItems">
+        <ion-item lines="none" class="items_">
+          <div slot="start" class="dotBig bgR"></div>
+          <ion-label class="lbl_">All Questions</ion-label>
+          <ion-label slot="end" class="total">75</ion-label>
+        </ion-item>
+        <ion-item lines="none" class="items_">
+          <div slot="start" class="dotBig bgW"></div>
+          <ion-label class="lbl_">Answered</ion-label>
+          <ion-label slot="end" class="total">28</ion-label>
+        </ion-item>
+        <ion-item lines="none" class="items_">
+          <div slot="start" class="dotBig bgS"></div>
+          <ion-label class="lbl_">Not Answered</ion-label>
+          <ion-label slot="end" class="total">9</ion-label>
+        </ion-item>
+        <ion-item lines="none" class="items_">
+          <div slot="start" class="dotBig bgR"></div>
+          <ion-label class="lbl_">Marked for Review</ion-label>
+          <ion-label slot="end" class="total">3</ion-label>
+        </ion-item>
+        <ion-item lines="none" class="items_">
+          <div slot="start" class="dotBig bgW"></div>
+          <ion-label class="lbl_">Answered and To Review</ion-label>
+          <ion-label slot="end" class="total">1</ion-label>
+        </ion-item>
+      </div>
+
+    </div>
+
+</div>
+
+</ion-content>
+
+<ion-footer>
+  <ion-label class="lbl_head">Are you sure you want to submit?</ion-label>
+
+  <ion-row class="row_btns">
+    <ion-col size="6" class="col_btns">
+      <ion-button class="btn_resume" size="large" color="tertiary" expand="block" (click)="resume()">Resume</ion-button>
+    </ion-col>
+    <ion-col size="6" class="col_btns">
+      <ion-button class="btn_leave" size="large" color="primary" expand="block" (click)="submit()">Submit</ion-button>
+    </ion-col>
+  </ion-row>
+</ion-footer>

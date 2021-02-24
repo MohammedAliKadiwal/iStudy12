@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-select-grade',
@@ -12,9 +13,14 @@ export class SelectGradePage implements OnInit {
   constructor(
     private router: Router,
     private statusBar: StatusBar,
+    private navCtrl: NavController,
     ) { }
 
   ngOnInit() {
+  }
+
+  back() {
+    this.navCtrl.pop();
   }
 
   dashboard() {

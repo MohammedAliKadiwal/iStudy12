@@ -1,0 +1,115 @@
+<ion-header>
+  <ion-toolbar class="appBar">
+    <!-- <ion-buttons slot="start">
+      <ion-button (click)="back()">
+        <ion-icon class="colorWhite" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons> -->
+    <ion-title class="colorWhite">Question Title</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-label class="lbl_">Tap on any quesion card to begin practice</ion-label>
+
+  <ion-slides [options]="slideQueOpts" class="que_scroll">
+    <ion-slide class="que_card" (click)="question()">
+      <div class="slide_">
+        <ion-row class="row_head">
+          <ion-col size="3" class="col_head">
+            <ion-label class="que_no">1</ion-label>
+          </ion-col>
+          <!-- <ion-col size="9" class="col_head right_">
+            <div class="dot_ bgS"></div>
+            <ion-label class="result_lbl colorS">Skipped</ion-label>
+          </ion-col> -->
+        </ion-row>
+        <ion-label class="que_desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+          Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+          of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
+          leap into electronic typesetting, remaining essentially unchanged.</ion-label>
+        <img src="../../assets/images/sample.jpg" class="img_" />
+      </div>
+    </ion-slide>
+    <ion-slide class="que_card" (click)="question()">
+      <div class="slide_">
+        <ion-row class="row_head">
+          <ion-col size="3" class="col_head">
+            <ion-label class="que_no">2</ion-label>
+          </ion-col>
+          <!-- <ion-col size="9" class="col_head right_">
+            <div class="dot_ bgS"></div>
+            <ion-label class="result_lbl colorS">Skipped</ion-label>
+          </ion-col> -->
+        </ion-row>
+        <ion-label class="que_desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+          Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+          of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
+          leap into electronic typesetting, remaining essentially unchanged.</ion-label>
+        <img src="../../assets/images/sample.jpg" class="img_" />
+      </div>
+    </ion-slide>
+    <ion-slide class="que_card inCorrect" (click)="question()">
+      <div class="slide_">
+        <ion-row class="row_head">
+          <ion-col size="3" class="col_head">
+            <ion-label class="que_no">3</ion-label>
+          </ion-col>
+          <ion-col size="9" class="col_head right_">
+            <div class="dot_ bgW"></div>
+            <ion-label class="result_lbl colorW">InCorrect</ion-label>
+          </ion-col>
+        </ion-row>
+        <ion-label class="que_desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+          Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+          of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
+          leap into electronic typesetting, remaining essentially unchanged.</ion-label>
+        <img src="../../assets/images/sample.jpg" class="img_" />
+      </div>
+    </ion-slide>
+    <ion-slide class="que_card correct" (click)="question()">
+      <div class="slide_">
+        <ion-row class="row_head">
+          <ion-col size="3" class="col_head">
+            <ion-label class="que_no">4</ion-label>
+          </ion-col>
+          <ion-col size="9" class="col_head right_">
+            <div class="dot_ bgR"></div>
+            <ion-label class="result_lbl colorR">Correct</ion-label>
+          </ion-col>
+        </ion-row>
+        <ion-label class="que_desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+          Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+          of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
+          leap into electronic typesetting, remaining essentially unchanged.</ion-label>
+        <img src="../../assets/images/sample.jpg" class="img_" />
+      </div>
+    </ion-slide>
+    <ion-slide class="que_card skipped" (click)="question()">
+      <div class="slide_">
+        <ion-row class="row_head">
+          <ion-col size="3" class="col_head">
+            <ion-label class="que_no">5</ion-label>
+          </ion-col>
+          <ion-col size="9" class="col_head right_">
+            <div class="dot_ bgS"></div>
+            <ion-label class="result_lbl colorS">Skipped</ion-label>
+          </ion-col>
+        </ion-row>
+        <ion-label class="que_desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+          Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+          of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
+          leap into electronic typesetting, remaining essentially unchanged.</ion-label>
+        <img src="../../assets/images/sample.jpg" class="img_" />
+      </div>
+    </ion-slide>
+  </ion-slides>
+
+</ion-content>
+
+<ion-footer>
+
+  <ion-button color="tertiary" size="large" expand="block" (click)="leave()">Leave Practice</ion-button>
+
+</ion-footer>

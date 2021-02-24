@@ -1,0 +1,55 @@
+<ion-content>
+
+  <div class="div_top">
+
+    <div class="div_">
+      <div class="div_img">
+      <img src="../../assets/images/login.png" class="img_"/>
+      </div>
+    </div>
+
+  <div class="div_form">
+
+    <ion-label class="lbl_wc">Welcome to,</ion-label>
+
+    <ion-label class="lbl_name">i-study12</ion-label>
+
+    <form [formGroup]="form" class="form_">
+
+      <div class="div_input">
+        <ion-label class="lbl_input">Enter Mobile No.</ion-label>
+
+        <ion-row class="row_">
+          <ion-col size="4" class="col_">
+            <ion-select interface="action-sheet" placeholder="IN (91)"
+              class="dropWidth_ select_" mode="md">
+              <ion-select-option value="c1">India (91)</ion-select-option>
+              <ion-select-option value="c2">United Kingdom (44)</ion-select-option>
+              <ion-select-option value="c3">United States (1)</ion-select-option>
+              <ion-select-option value="c4">Canada (1)</ion-select-option>
+            </ion-select>
+          </ion-col>
+          <ion-col size="8" class="col_">
+            <ion-item no-padding lines="none" class="items_ shadow_input item_">
+              <ion-input type="number" formControlName="number" class="input_"></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+
+        <ion-item no-padding lines="none" class="validator-error"
+          *ngIf="form.controls.number.hasError('required') && form.controls.number.touched">
+          <p class="content">Please Enter Mobile No.!</p>
+        </ion-item>
+
+      </div>
+
+      <ion-button shape="round" size="large" class="btn_" (click)="submit()">
+        <ion-icon name="arrow-forward"></ion-icon>
+      </ion-button>
+
+    </form>
+  </div>
+
+</div>
+
+</ion-content>

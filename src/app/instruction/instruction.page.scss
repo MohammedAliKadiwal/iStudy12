@@ -1,0 +1,89 @@
+ion-content{
+    .row_{
+        padding: 20px 10px;
+        .col_{
+            .lblNo{
+                background: var(--ion-color-light-shade);
+                padding: 14px 20px;
+                font-size: 16px;
+                border-radius: 8px;
+                font-family: 'MuliSemiBold';
+            }
+            .lblTitle{
+                display: block;
+                font-size: 20px;
+                padding: 0 0 0 8px;
+                font-family: 'MuliBold';
+            }
+        }
+    }
+    .div_seg{
+        background: var(--ion-color-primary-contrast);
+        padding: 0px 16px;
+        width: 100%;
+        border-bottom: 1px solid #ccc;
+        .seg_{
+            padding: 0px 16px;
+            .seg_btn{
+                --color:  var(--ion-color-primary);
+                --color-checked: var(--ion-color-secondary);
+                --indicator-color: var(--ion-color-secondary);
+                --indicator-height: 2px;
+                font-size: 18px;
+                text-transform: capitalize;
+                font-family: 'MuliBold';
+            }
+        }
+    }
+    .row_grid{
+        .col_grid{
+            padding: 16px;
+            .lblTitle{
+                padding: 10px 0;
+                display: block;
+                font-size: 16px;
+                color: var(--ion-color-medium);
+                font-family: 'MuliSemiBold';
+            }
+            .lblNo{
+                display: block;
+                font-size: 32px;
+                font-family: 'MuliSemiBold';
+            }
+        }
+    }
+    .lblInfo{
+        font-size: 18px;
+        font-family: "MuliSemiBold";
+        margin: 8px 16px;
+        padding: 16px 0px;
+        display: block;
+        border-bottom: 1px solid #ccc;
+    }
+    .exp_{
+        .exPanel_{
+            box-shadow: none !important;
+            border-radius: 0 !important;
+            margin: 0 16px;
+            border-bottom: 1px solid #ccc;
+            .exPanelHeader_{
+                padding: 0;
+                height: 58px;
+                .exLabel_{
+                    font-size: 18px;
+                    font-family: "MuliSemiBold";
+                }
+            }
+            .exDiv_{
+                .exDescLbl_{
+                    font-size: 18px;
+                    font-family: "MuliSemiBold";
+                }
+            }
+        }
+    }
+}
+ion-footer{
+    padding: 14px;
+    border-top: 1px solid #ccc;
+}

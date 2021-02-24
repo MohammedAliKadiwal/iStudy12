@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { NavController } from '@ionic/angular';
 
@@ -12,6 +13,7 @@ export class RecommendPage implements OnInit {
   constructor(
     private statusBar: StatusBar,
     private navCtrl: NavController,
+    private router: Router,
   ) { }
 
   ngOnInit() {
@@ -25,6 +27,14 @@ export class RecommendPage implements OnInit {
 
   back() {
     this.navCtrl.pop();
+  }
+
+  pdf() {
+    this.router.navigate(['/pdf']);
+  }
+
+  video() {
+    this.router.navigate(['/video']);
   }
 
 }

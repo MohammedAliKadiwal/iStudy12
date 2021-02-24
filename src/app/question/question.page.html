@@ -1,0 +1,339 @@
+<ion-header>
+  <ion-toolbar class="appBar">
+    <ion-buttons slot="start">
+      <ion-button (click)="back()">
+        <ion-icon class="colorWhite" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title mode="md" class="colorWhite">All Questions</ion-title>
+    <ion-icon slot="end" class="iconWatch" name="stopwatch-outline"></ion-icon>
+    <ion-label slot="end" class="lbl_time">
+      02 : 57 : 52
+    </ion-label>
+  </ion-toolbar>
+  <ion-toolbar class="ext appBar">
+    <ion-label class="lblTopHead">Physics - Qn 4</ion-label>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-slides [options]="slideQueOpts" class="que_scroll">
+    <ion-slide class="que_card">
+      <div class="slide_">
+        <div class="que">
+          <ion-row class="rowTop">
+            <ion-col size="4" class="colTop">
+              <ion-label class="que_no">1
+                <ion-icon name="caret-down-sharp" class="arrowDown" (click)="queNo()"></ion-icon>
+              </ion-label>
+            </ion-col>
+            <ion-col size="8" class="colTop">
+              <ion-item lines="none" class="itemChk">
+                <ion-checkbox mode="md"></ion-checkbox>
+                <ion-label class="lblReview">Review</ion-label>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+          <ion-row class="row_sec">
+            <ion-col size="6" class="col_sec left_">
+              <ion-label class="lbl_sec">Section 1 . 18 marks</ion-label>
+            </ion-col>
+            <ion-col size="6" class="col_sec right_">
+              <ion-label class="lbl_sec lbl_BG">
+                <ion-icon name="disc-outline"></ion-icon>
+                Single Correct MCQ</ion-label>
+            </ion-col>
+          </ion-row>
+          <ion-label class="que_desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+            Ipsum has been the industry's standard dummy text ever since the 1500s.</ion-label>
+          <img src="../../assets/images/sample.jpg" class="img_" />
+        </div>
+        <div class="opt">
+          <ion-row class="row_list" [ngClass]="{'select':answerVal === 'a' }" (click)="answer('a')">
+            <ion-col size="2" class="col_list">
+              <ion-label class="list_no">A</ion-label>
+            </ion-col>
+            <ion-col size="10" class="col_list">
+              <ion-label class="list_opt">Answer 1</ion-label>
+            </ion-col>
+          </ion-row>
+          <ion-row class="row_list" [ngClass]="{'select':answerVal === 'b' }" (click)="answer('b')">
+            <ion-col size="2" class="col_list">
+              <ion-label class="list_no">B</ion-label>
+            </ion-col>
+            <ion-col size="10" class="col_list">
+              <ion-label class="list_opt">Answer 2</ion-label>
+            </ion-col>
+          </ion-row>
+          <ion-row class="row_list" [ngClass]="{'select':answerVal === 'c' }" (click)="answer('c')">
+            <ion-col size="2" class="col_list">
+              <ion-label class="list_no">C</ion-label>
+            </ion-col>
+            <ion-col size="10" class="col_list">
+              <ion-label class="list_opt">Answer 3</ion-label>
+            </ion-col>
+          </ion-row>
+          <ion-row class="row_list" [ngClass]="{'select':answerVal === 'd' }" (click)="answer('d')">
+            <ion-col size="2" class="col_list">
+              <ion-label class="list_no">D</ion-label>
+            </ion-col>
+            <ion-col size="10" class="col_list">
+              <ion-label class="list_opt">Lorem Ipsum is simply dummy text of the printing.</ion-label>
+            </ion-col>
+          </ion-row>
+        </div>
+        <ion-row class="row_btns">
+          <ion-col size="6" class="col_btns">
+            <ion-button color="tertiary" expand="block" size="large" (click)="viewHint()">View Hint</ion-button>
+          </ion-col>
+          <ion-col size="6" class="col_btns">
+            <ion-button color="tertiary" expand="block" size="large">View Solution</ion-button>
+          </ion-col>
+        </ion-row>
+
+        <mat-accordion>
+          <mat-expansion-panel class="solExp">
+            <mat-expansion-panel-header class="solExpHeader">
+              <ion-icon class="solIcon" name="document-text-outline"></ion-icon>
+              <ion-label class="solLbl">Solution</ion-label>
+            </mat-expansion-panel-header>
+            <div class="solDesc">
+              <ion-label class="solDescLbl">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                Lorem
+                Ipsum has been the industry's standard dummy text ever since the 1500s.</ion-label>
+              <img src="../../assets/images/sample.jpg" class="solImg" />
+              <ion-row class="row_list">
+                <ion-col size="2" class="col_list">
+                  <ion-label class="list_no">D</ion-label>
+                </ion-col>
+                <ion-col size="10" class="col_list">
+                  <ion-label class="list_opt">Lorem Ipsum is simply dummy text of the printing.</ion-label>
+                </ion-col>
+              </ion-row>
+            </div>
+          </mat-expansion-panel>
+        </mat-accordion>
+
+        <ion-button size="large" expand="block" class="nxt_btn">Next Question</ion-button>
+      </div>
+    </ion-slide>
+
+    <ion-slide class="que_card">
+      <div class="slide_">
+        <div class="que">
+          <ion-row class="rowTop">
+            <ion-col size="4" class="colTop">
+              <ion-label class="que_no">2
+                <ion-icon name="caret-down-sharp" class="arrowDown" (click)="queNo()"></ion-icon>
+              </ion-label>
+            </ion-col>
+            <ion-col size="8" class="colTop">
+              <ion-item lines="none" class="itemChk">
+                <ion-checkbox mode="md"></ion-checkbox>
+                <ion-label class="lblReview">Review</ion-label>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+          <ion-label class="que_desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+            Ipsum has been the industry's standard dummy text ever since the 1500s.</ion-label>
+          <img src="../../assets/images/sample.jpg" class="img_" />
+        </div>
+        <div class="opt">
+          <ion-row class="row_list" [ngClass]="{'select':answerVal === 'a' }" (click)="answer('a')">
+            <ion-col size="2" class="col_list">
+              <ion-label class="list_no">A</ion-label>
+            </ion-col>
+            <ion-col size="10" class="col_list">
+              <ion-label class="list_opt">Answer 1</ion-label>
+            </ion-col>
+          </ion-row>
+          <ion-row class="row_list bgR" [ngClass]="{'select':answerVal === 'b' }" (click)="answer('b')">
+            <ion-col size="2" class="col_list">
+              <ion-label class="list_no">B</ion-label>
+            </ion-col>
+            <ion-col size="10" class="col_list">
+              <ion-label class="list_opt">Answer 2</ion-label>
+            </ion-col>
+            <!-- Correct Answer -->
+            <ion-row class="row_ans">
+              <ion-col size="1" class="col_ans spcTop">
+                <ion-icon name="close-circle-sharp" class="icon_ colorR"></ion-icon>
+              </ion-col>
+              <ion-col size="11" class="col_ans">
+                <ion-label class="ans_">Correct Answer</ion-label>
+              </ion-col>
+            </ion-row>
+          </ion-row>
+          <ion-row class="row_list" [ngClass]="{'select':answerVal === 'c' }" (click)="answer('c')">
+            <ion-col size="2" class="col_list">
+              <ion-label class="list_no">C</ion-label>
+            </ion-col>
+            <ion-col size="10" class="col_list">
+              <ion-label class="list_opt">Answer 3</ion-label>
+            </ion-col>
+          </ion-row>
+          <ion-row class="row_list bgW" [ngClass]="{'select':answerVal === 'd' }" (click)="answer('d')">
+            <ion-col size="2" class="col_list">
+              <ion-label class="list_no">D</ion-label>
+            </ion-col>
+            <ion-col size="10" class="col_list">
+              <ion-label class="list_opt">Lorem Ipsum is simply dummy text of the printing.</ion-label>
+            </ion-col>
+            <!-- Your Answer -->
+            <ion-row class="row_ans">
+              <ion-col size="1" class="col_ans spcTop">
+                <ion-icon name="checkmark-circle-sharp" class="icon_ colorW"></ion-icon>
+              </ion-col>
+              <ion-col size="11" class="col_ans">
+                <ion-label class="ans_">Your Answer</ion-label>
+              </ion-col>
+            </ion-row>
+          </ion-row>
+        </div>
+        <ion-row class="row_btns">
+          <ion-col size="6" class="col_btns">
+            <ion-button color="tertiary" expand="block" size="large" (click)="viewHint()">View Hint</ion-button>
+          </ion-col>
+          <ion-col size="6" class="col_btns">
+            <ion-button color="tertiary" expand="block" size="large">View Solution</ion-button>
+          </ion-col>
+        </ion-row>
+
+        <mat-accordion>
+          <mat-expansion-panel class="solExp">
+            <mat-expansion-panel-header class="solExpHeader">
+              <ion-icon class="solIcon" name="document-text-outline"></ion-icon>
+              <ion-label class="solLbl">Solution</ion-label>
+            </mat-expansion-panel-header>
+            <div class="solDesc">
+              <ion-label class="solDescLbl">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                Lorem
+                Ipsum has been the industry's standard dummy text ever since the 1500s.</ion-label>
+              <img src="../../assets/images/sample.jpg" class="solImg" />
+              <ion-row class="row_list">
+                <ion-col size="2" class="col_list">
+                  <ion-label class="list_no">D</ion-label>
+                </ion-col>
+                <ion-col size="10" class="col_list">
+                  <ion-label class="list_opt">Lorem Ipsum is simply dummy text of the printing.</ion-label>
+                </ion-col>
+              </ion-row>
+            </div>
+          </mat-expansion-panel>
+        </mat-accordion>
+
+        <ion-button size="large" expand="block" class="nxt_btn">Next Question</ion-button>
+      </div>
+    </ion-slide>
+
+    <ion-slide class="que_card">
+      <div class="slide_">
+        <div class="que">
+          <ion-row class="rowTop">
+            <ion-col size="4" class="colTop">
+              <ion-label class="que_no">3
+                <ion-icon name="caret-down-sharp" class="arrowDown" (click)="queNo()"></ion-icon>
+              </ion-label>
+            </ion-col>
+            <ion-col size="8" class="colTop">
+              <ion-item lines="none" class="itemChk">
+                <ion-checkbox mode="md"></ion-checkbox>
+                <ion-label class="lblReview">Review</ion-label>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+          <ion-label class="que_desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+            Ipsum has been the industry's standard dummy text ever since the 1500s.</ion-label>
+          <img src="../../assets/images/sample.jpg" class="img_" />
+        </div>
+        <div class="opt">
+          <ion-row class="row_list" [ngClass]="{'select':answerVal === 'a' }" (click)="answer('a')">
+            <ion-col size="2" class="col_list">
+              <ion-label class="list_no">A</ion-label>
+            </ion-col>
+            <ion-col size="10" class="col_list">
+              <ion-label class="list_opt">Answer 1</ion-label>
+            </ion-col>
+          </ion-row>
+          <ion-row class="row_list" [ngClass]="{'select':answerVal === 'b' }" (click)="answer('b')">
+            <ion-col size="2" class="col_list">
+              <ion-label class="list_no">B</ion-label>
+            </ion-col>
+            <ion-col size="10" class="col_list">
+              <ion-label class="list_opt">Answer 2</ion-label>
+            </ion-col>
+          </ion-row>
+          <ion-row class="row_list" [ngClass]="{'select':answerVal === 'c' }" (click)="answer('c')">
+            <ion-col size="2" class="col_list">
+              <ion-label class="list_no">C</ion-label>
+            </ion-col>
+            <ion-col size="10" class="col_list">
+              <ion-label class="list_opt">Answer 3</ion-label>
+            </ion-col>
+          </ion-row>
+          <ion-row class="row_list" [ngClass]="{'select':answerVal === 'd' }" (click)="answer('d')">
+            <ion-col size="2" class="col_list">
+              <ion-label class="list_no">D</ion-label>
+            </ion-col>
+            <ion-col size="10" class="col_list">
+              <ion-label class="list_opt">Lorem Ipsum is simply dummy text of the printing.</ion-label>
+            </ion-col>
+          </ion-row>
+        </div>
+        <ion-row class="row_btns">
+          <ion-col size="6" class="col_btns">
+            <ion-button color="tertiary" expand="block" size="large" (click)="viewHint()">View Hint</ion-button>
+          </ion-col>
+          <ion-col size="6" class="col_btns">
+            <ion-button color="tertiary" expand="block" size="large">View Solution</ion-button>
+          </ion-col>
+        </ion-row>
+
+        <mat-accordion>
+          <mat-expansion-panel class="solExp">
+            <mat-expansion-panel-header class="solExpHeader">
+              <ion-icon class="solIcon" name="document-text-outline"></ion-icon>
+              <ion-label class="solLbl">Solution</ion-label>
+            </mat-expansion-panel-header>
+            <div class="solDesc">
+              <ion-label class="solDescLbl">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                Lorem
+                Ipsum has been the industry's standard dummy text ever since the 1500s.</ion-label>
+              <img src="../../assets/images/sample.jpg" class="solImg" />
+              <ion-row class="row_list">
+                <ion-col size="2" class="col_list">
+                  <ion-label class="list_no">D</ion-label>
+                </ion-col>
+                <ion-col size="10" class="col_list">
+                  <ion-label class="list_opt">Lorem Ipsum is simply dummy text of the printing.</ion-label>
+                </ion-col>
+              </ion-row>
+            </div>
+          </mat-expansion-panel>
+        </mat-accordion>
+
+        <ion-button size="large" expand="block" class="nxt_btn">Next Question</ion-button>
+      </div>
+    </ion-slide>
+
+  </ion-slides>
+
+</ion-content>
+
+<ion-footer>
+  <ion-row class="row_btns">
+    <ion-col size="6" class="col_btns borderR">
+      <ion-button expand="full" size="large" fill="clear">
+        <ion-icon slot="start" size="small" name="chevron-back-sharp"></ion-icon>
+        Previous
+      </ion-button>
+    </ion-col>
+    <ion-col size="6" class="col_btns borderL">
+      <ion-button expand="full" size="large" fill="clear" (click)="summay()">
+        <ion-icon slot="end" size="small" name="chevron-forward-sharp"></ion-icon>
+        Next
+      </ion-button>
+    </ion-col>
+  </ion-row>
+</ion-footer>

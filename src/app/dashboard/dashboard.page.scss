@@ -1,4 +1,5 @@
 ion-content{
+    --background: var(--ion-color-light);
     .div_card{
         height: 180px;
         background: var(--ion-color-primary);
@@ -8,18 +9,20 @@ ion-content{
             display: block;
             font-weight: bold;
             text-align: left;
-            padding: 0px 0px 4px 16px;
+            font-size: 16px;
+            padding: 16px 0px 4px 16px;
             color: var(--ion-color-secondary);
         }
         .uname{
             display: block;
             font-weight: bold;
             text-align: left;
+            font-size: 16px;
             padding: 0px 0px 0px 16px;
             color: var(--ion-color-primary-contrast);
         }
         .sub_head{
-            margin: 40px 0px 0px 12px;
+            margin: 28px 0px 0px 12px;
             .sub_sec{
             width: 70px;
             display: inline-block;
@@ -31,7 +34,8 @@ ion-content{
             }
             .lbl_{
                 display: block;
-                font-size: 13px;
+                font-family: 'MuliSemiBold';
+                font-size: 14px;
                 color: var(--ion-color-primary-contrast);
             }
         }
@@ -55,13 +59,13 @@ ion-content{
             margin-top: auto;
             margin-bottom: auto;
             .recommend{
-                font-weight: bold;
-                font-size: 18px;
+                font-family: 'MuliBold';
+                font-size: 20px;
                 // margin: 8px;
             }
             .all{
                 font-size: 14px;
-                // float: right;
+                font-family: 'MuliBold';
                 // margin: 8px;
             }
         }
@@ -69,19 +73,32 @@ ion-content{
     .div_scroll{
         // overflow-x: scroll;
         // white-space: nowrap;
+        // margin: 0 0 0 8px;
         .videos_card{
             width: 40%;
             display: inline-block;
-            margin: 8px;
-            .thumbnail{
-                height: 100px;
-                width: 100%;
-                border-radius: 16px;
-                object-fit: cover;
-                box-shadow: 0 4px 16px #ccc;
+            margin: 8px 10px;
+            .vid_{
+                position: relative;
+                .thumbnail{
+                    height: 100px;
+                    width: 100%;
+                    border-radius: 8px;
+                    object-fit: cover;
+                    box-shadow: 0 4px 16px #ccc;
+                }
+                .icon_{
+                    color: var(--ion-color-primary-contrast);
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
             }
             .lbl_vid{
-                font-size: 12px;
+                font-size: 14px;
                 margin: 8px;
                 text-align: left;
                 display: block;
@@ -89,22 +106,24 @@ ion-content{
                 overflow: hidden;
                 text-overflow: ellipsis;
                 -webkit-line-clamp: 2;
-                -webkit-box-orient: vertical;            
+                -webkit-box-orient: vertical;
+                line-height: 1.5;
+                font-family: 'MuliBold';           
             }
         }
         .doc_card{
             width: 28%;
             display: inline-block;
-            margin: 4px;
+            margin: 6px;
             .thumbnail{
                 height: 100px;
                 width: 100%;
-                border-radius: 16px;
+                border-radius: 8px;
                 object-fit: cover;
                 box-shadow: 0 4px 16px #ccc;
             }
             .lbl_vid{
-                font-size: 12px;
+                font-size: 14px;
                 margin: 8px;
                 text-align: left;
                 display: block;
@@ -112,15 +131,64 @@ ion-content{
                 overflow: hidden;
                 text-overflow: ellipsis;
                 -webkit-line-clamp: 2;
-                -webkit-box-orient: vertical;   
+                -webkit-box-orient: vertical;
+                line-height: 1.5;
+                font-family: 'MuliBold';   
             }
         }
     }
-    .div_shr{
-        .shr_img{
-            width: 100%;
-            height: 100px;
-            object-fit: cover;
+    .divShr{
+        box-shadow: 0 2px 10px #ccc;
+        margin: 10px 0;
+        background: var(--ion-color-primary-contrast);
+        .rowShr{
+            padding: 8px;
+            .colShr{
+                margin-top: auto;
+                margin-bottom: auto;
+                .lblShr{
+                    display: block;
+                    font-family: 'MuliBold';
+                    font-size: 18px;
+                    padding: 2px 0;
+                }
+                .lblInvite{
+                    display: block;
+                    font-size: 16px;
+                    padding: 2px 0;
+                    color: var(--ion-color-medium);
+                }
+                .btn_{
+                    margin: 0px;
+                    font-size: 14px;
+                    font-family: 'MuliBold';
+                    --background: orange;
+                    --background-activated: transparent;
+                    color: var(--ion-color-primary);
+                }
+                .imgShr{
+
+                }
+            }
         }
     }
+    // .div_shr{
+    //     margin: 8px 0px;
+    //     box-shadow: 0 2px 10px #ccc;
+    //     position: relative;
+    //     .shr_img{
+    //         width: 100%;
+    //         height: 88px;
+    //         object-fit: cover;
+    //     }
+    //     .btn_{
+    //         position: absolute;
+    //         bottom: 8px;
+    //         left: 16px;
+    //         --background: orange;
+    //         --background-activated: transparent;
+    //         color: var(--ion-color-primary);
+    //         font-weight: bold;
+    //     }
+    // }
 }

@@ -5,16 +5,15 @@ ion-content{
         padding: 16px 12px;
         .lbl_medium{
             display: block;
-            font-size: 18px;
+            font-size: 20px;
             margin: 0 0 28px 0;
         }
         .lbl_grade{
-            font-size: 17px;
             background: var(--ion-color-primary);
             color: white;
             padding: 8px;
             border-radius: 8px;
-            font-size: 14px;
+            font-size: 16px;
         }
     }
 }

@@ -7,9 +7,25 @@ ion-content{
         .rowVid{
             .colVid{
                 padding: 0px;
-                .imgVid{
-                    box-shadow: 0px 2px 10px #ccc;
-                    border-radius: 8px;
+                .div_img{
+                    position: relative;
+                    .imgVid{
+                        box-shadow: 0px 2px 10px #ccc;
+                        border-radius: 8px;
+                        object-fit: cover;
+                        height: 100%;
+                        width: 100%;
+                    }
+                    .icon_{
+                        color: var(--ion-color-primary-contrast);
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        margin: auto;
+                        top: 50%;
+                        transform: translateY(-50%);
+                    }
+                    
                 }
                 .lblVid{
                     display: block;

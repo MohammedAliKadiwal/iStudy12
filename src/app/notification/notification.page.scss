@@ -1,13 +1,14 @@
 ion-content{
     .div_card{
-        margin: 16px;
-        padding: 16px;
+        margin: 8px 8px;
+        padding: 10px;
         box-shadow: 0px 2px 10px #ccc;
         border-radius: 8px;
         .lbl_head{
             display: block;
             font-family: 'MuliBold';
             padding: 4px 0px;
+            font-size: 18px;
         }
         .img_{
             width: 100%;
@@ -15,10 +16,12 @@ ion-content{
         .lbl_desc{
             padding: 8px 0px;
             display: block;
+            font-size: 16px;
         }
         .lbl_date{
             text-align: right;
             display: block;
+            font-size: 14px;
         }
     }
 }

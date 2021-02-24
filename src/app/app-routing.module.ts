@@ -4,7 +4,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'select-grade',
+    redirectTo: 'login',
     pathMatch: 'full'
   },
   {
@@ -46,6 +46,54 @@ const routes: Routes = [
   {
     path: 'recommend',
     loadChildren: () => import('./recommend/recommend.module').then( m => m.RecommendPageModule)
+  },
+  {
+    path: 'teacher-details',
+    loadChildren: () => import('./teacher-details/teacher-details.module').then( m => m.TeacherDetailsPageModule)
+  },
+  {
+    path: 'pdf',
+    loadChildren: () => import('./pdf/pdf.module').then( m => m.PdfPageModule)
+  },
+  {
+    path: 'classroom',
+    loadChildren: () => import('./classroom/classroom.module').then( m => m.ClassroomPageModule)
+  },
+  {
+    path: 'payment',
+    loadChildren: () => import('./payment/payment.module').then( m => m.PaymentPageModule)
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'verify',
+    loadChildren: () => import('./verify/verify.module').then( m => m.VerifyPageModule)
+  },
+  {
+    path: 'all-questions',
+    loadChildren: () => import('./all-questions/all-questions.module').then( m => m.AllQuestionsPageModule)
+  },
+  {
+    path: 'question',
+    loadChildren: () => import('./question/question.module').then( m => m.QuestionPageModule)
+  },
+  {
+    path: 'video',
+    loadChildren: () => import('./video/video.module').then( m => m.VideoPageModule)
+  },
+  {
+    path: 'instruction',
+    loadChildren: () => import('./instruction/instruction.module').then( m => m.InstructionPageModule)
+  },
+  {
+    path: 'summary',
+    loadChildren: () => import('./summary/summary.module').then( m => m.SummaryPageModule)
+  },
+  {
+    path: 'report',
+    loadChildren: () => import('./report/report.module').then( m => m.ReportPageModule)
   },
 ];
 

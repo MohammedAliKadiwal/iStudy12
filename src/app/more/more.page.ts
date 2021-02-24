@@ -23,16 +23,16 @@ export class MorePage implements OnInit {
     this.statusBar.backgroundColorByHexString('#212B46');
   }
 
-  info() {
+  profile() {
     this.router.navigate(['/profile']);
   }
 
   classroom() {
-
+    this.router.navigate(['/classroom']);
   }
 
   payment() {
-
+    this.router.navigate(['/payment']);
   }
 
   youtube() {
@@ -47,20 +47,20 @@ export class MorePage implements OnInit {
     window.open("https://www.instagram.com/", "_system");
   }
 
-   whatsApp() {
-     
+  whatsApp() {
+    window.open('https://api.whatsapp.com/send?phone=919409844400');
   }
 
   call() {
-
+    window.open('tel:+919409844400', '_system', 'location=yes');
   }
 
   telegram() {
-
+    console.log('Telegram');
   }
 
   email() {
-
+    console.log('Email');
   }
 
   about() {

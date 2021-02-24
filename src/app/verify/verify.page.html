@@ -1,0 +1,30 @@
+<ion-content>
+
+  <ion-button fill="clear" class="btn_back" (click)="back()">
+    <ion-icon name="arrow-back"></ion-icon>
+  </ion-button>
+
+  <ion-label class="lbl_head">Verify Number</ion-label>
+
+  <ion-label class="info">Please enter the OTP we have sent on 9876543210</ion-label>
+
+  <form [formGroup]="otpForm" class="form_">
+    <div class="div_box">
+      <ion-input type="number" formControlName="input1" class="input_"></ion-input>
+      <ion-input type="number" formControlName="input1" class="input_"></ion-input>
+      <ion-input type="number" formControlName="input1" class="input_"></ion-input>
+      <ion-input type="number" formControlName="input1" class="input_"></ion-input>
+      <ion-input type="number" formControlName="input1" class="input_"></ion-input>
+      <ion-input type="number" formControlName="input1" class="input_"></ion-input>
+    </div>
+    <ion-item no-padding lines="none" class="validator-error"
+    *ngIf="otpForm.controls.input1.hasError('required') && otpForm.controls.input1.touched">
+    <p class="content">Please Enter OTP!</p>
+  </ion-item>
+  </form>
+
+  <ion-label class="resend" (click)="resend()">Resend OTP</ion-label>
+
+  <ion-button expand="block" size="large" class="btn_" (click)="submit()">Verify OTP</ion-button>
+
+</ion-content>

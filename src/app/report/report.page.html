@@ -1,0 +1,87 @@
+<ion-header>
+  <ion-toolbar class="appBar">
+    <ion-buttons slot="start">
+      <ion-button (click)="close()">
+        <ion-icon class="colorWhite" name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title mode="md" class="colorWhite">Report</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <mat-accordion>
+    <mat-expansion-panel class="exPanel">
+      <mat-expansion-panel-header class="exPanelHeader">
+        <ion-badge class="exBadge">1</ion-badge>
+        <ion-label class="exLabel">Lorem ipsum Demo text</ion-label>
+      </mat-expansion-panel-header>
+      <ion-item class="exItem_" lines="full" (click)="instruction()">
+        <ion-icon class="exIcon_" name="play-sharp"></ion-icon>
+        <ion-label class="exLbl_">Lorem ipsum Demo text</ion-label>
+      </ion-item>
+      <ion-item class="exItem_" lines="full" (click)="instruction()">
+        <ion-icon class="exIcon_" name="play-sharp"></ion-icon>
+        <ion-label class="exLbl_">Lorem ipsum Demo text</ion-label>
+      </ion-item>
+    </mat-expansion-panel>
+    </mat-accordion>
+
+    <div class="div_seg">
+      <ion-segment [(ngModel)]="subjects" mode="md" class="seg_">
+        <ion-segment-button value="maths" class="seg_btn">
+          Maths
+          <ion-label class="lbl_no">11 / 100</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="chemistry" class="seg_btn">
+          Chemistry
+          <ion-label class="lbl_no">16 / 100</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="biology" class="seg_btn">
+          Biology
+          <ion-label class="lbl_no">12 / 100</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="physics" class="seg_btn">
+          Physics
+          <ion-label class="lbl_no">23 / 100</ion-label>
+        </ion-segment-button>
+      </ion-segment>
+    </div>
+
+    <div [ngSwitch]="subjects">
+
+      <div *ngSwitchCase="'maths'">
+        <ion-item lines="none" class="items_">
+          <ion-icon name="timer-outline" slot="start"></ion-icon>
+          <ion-label class="lbl_">Score</ion-label>
+          <ion-label slot="end" class="total">11 / 100</ion-label>
+        </ion-item>
+        <ion-item lines="none" class="items_">
+          <ion-icon name="watch-outline" slot="start"></ion-icon>
+          <ion-label class="lbl_">Score</ion-label>
+          <ion-label slot="end" class="total">11 / 100</ion-label>
+        </ion-item>
+      </div>
+
+      <div *ngSwitchCase="'chemistry'">        
+        <div class="empty_">
+          <ion-label class="lbl_empty">Chemistry</ion-label>
+        </div>
+      </div>
+
+      <div *ngSwitchCase="'biology'">
+        <div class="empty_">
+          <ion-label class="lbl_empty">Biology</ion-label>
+        </div>
+      </div>
+
+      <div *ngSwitchCase="'physics'">        
+        <div class="empty_">
+          <ion-label class="lbl_empty">Physics</ion-label>
+        </div>
+      </div>
+
+  </div>
+
+</ion-content>

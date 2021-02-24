@@ -1,0 +1,17 @@
+ion-header{
+    .div_img{
+        padding: 8px;
+        .img_header{
+            width: 100%;
+            box-shadow: 0 2px 10px #ccc;
+            border-radius: 10px;
+        }
+    }
+}
+ion-content{
+    .desc{
+        display: block;
+        font-size: 18px;
+        padding: 8px;
+    }
+}

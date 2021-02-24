@@ -1,0 +1,81 @@
+ion-content{
+    --padding-start: 16px;
+    --padding-end: 16px;
+    --padding-top: 16px;
+    --padding-bottom: 16px;
+    position: relative;
+    .div_top{
+        position: absolute;
+        top: 40%;
+        right: 0;
+        left: 0;
+        transform: translateY(-50%);
+        margin: 16px;
+        .div_{
+            width: 100%;
+            margin: 0 0 28px 0;
+            text-align: center;
+            .div_img{
+                background: var(--ion-color-tertiary);
+                width: 200px;
+                height: 200px;
+                margin: auto;
+                position: relative;
+                border-radius: 100%;
+                .img_{
+                    width: 175px;
+                    transform: translateY(-50%);
+                    top: 50%;
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                }
+            }
+        }
+        .div_form{
+            .lbl_wc{
+                display: block;
+                font-weight: bold;
+                font-size: 22px;
+            }
+            .lbl_name{
+                display: block;
+                font-size: 34px;
+                font-weight: bold;
+                margin: 16px 0 0 40px;
+            }
+            .btn_{
+                --padding-start: 14px;
+                --padding-end: 14px;
+                --border-radius: 100%;
+                float: right;
+            }
+            .div_input{
+                margin: 28px 0 24px 0;
+                .lbl_input{
+                    font-size: 16px;
+                }
+                .row_{
+                    border-bottom: 1px solid var(--ion-color-secondary-contrast);
+                    margin: 8px 0 0 0;
+                    .col_{
+                        padding: 0;
+                        .select_{
+                            width: 80px;
+                            --placeholder-opacity: 1;
+                            --padding-top: 0px;
+                            --padding-bottom: 0px;
+                            --padding-start: 0px;
+                        }
+                        .item_{
+                            --min-height: 0px;
+                            --padding-top: 0px;
+                            --padding-bottom: 4px;
+                        }
+                    }
+                }   
+            }
+        }
+    }
+}
