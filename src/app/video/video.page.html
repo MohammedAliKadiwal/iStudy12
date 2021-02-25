@@ -1,80 +1,24 @@
 <ion-content>
+  <vm-player #player playsinline (vPlaybackReady)="onPlaybackReady()">
+    <vm-video cross-origin="true" poster="https://media.vimejs.com/poster.png">
+      <source data-src="https://media.vimejs.com/720p.mp4" type="video/mp4" />
+      <track default kind="subtitles" src="https://media.vimejs.com/subs/english.vtt" srclang="en" label="English" />
+      <track kind="subtitles" src="https://media.vimejs.com/subs/spanish.vtt" srclang="es" label="Spanish" />
+    </vm-video>
 
-  <ion-row class="row_list">
+    <vm-default-ui>
+    </vm-default-ui>
+  </vm-player>
+  <ion-row class="row_list" *ngFor="let item of playlist; let $index = index">
     <ion-col size="4" class="col_list">
       <div class="div_img">
-        <img src="../../assets/images/placeholder.png" class="imgVid"/>
+        <img [src]="item.image" class="imgVid" />
         <div class="layer"></div>
         <ion-icon size="large" class="icon_" name="play-circle-outline"></ion-icon>
       </div>
     </ion-col>
     <ion-col size="8" class="col_list">
-      <ion-label class="lbl_">Lorem Ipsum is simply dummy text of the printing.</ion-label>
-    </ion-col>
-  </ion-row>
-
-  <ion-row class="row_list">
-    <ion-col size="4" class="col_list">
-      <div class="div_img">
-        <img src="../../assets/images/placeholder.png" class="imgVid"/>
-        <div class="layer"></div>
-        <ion-icon size="large" class="icon_" name="play-circle-outline"></ion-icon>
-      </div>
-    </ion-col>
-    <ion-col size="8" class="col_list">
-      <ion-label class="lbl_">Lorem Ipsum is simply dummy text of the printing.</ion-label>
-    </ion-col>
-  </ion-row>
-
-  <ion-row class="row_list">
-    <ion-col size="4" class="col_list">
-      <div class="div_img">
-        <img src="../../assets/images/placeholder.png" class="imgVid"/>
-        <div class="layer"></div>
-        <ion-icon size="large" class="icon_" name="play-circle-outline"></ion-icon>
-      </div>
-    </ion-col>
-    <ion-col size="8" class="col_list">
-      <ion-label class="lbl_">Lorem Ipsum is simply dummy text of the printing.</ion-label>
-    </ion-col>
-  </ion-row>
-
-  <ion-row class="row_list">
-    <ion-col size="4" class="col_list">
-      <div class="div_img">
-        <img src="../../assets/images/placeholder.png" class="imgVid"/>
-        <div class="layer"></div>
-        <ion-icon size="large" class="icon_" name="play-circle-outline"></ion-icon>
-      </div>
-    </ion-col>
-    <ion-col size="8" class="col_list">
-      <ion-label class="lbl_">Lorem Ipsum is simply dummy text of the printing.</ion-label>
-    </ion-col>
-  </ion-row>
-
-  <ion-row class="row_list">
-    <ion-col size="4" class="col_list">
-      <div class="div_img">
-        <img src="../../assets/images/placeholder.png" class="imgVid"/>
-        <div class="layer"></div>
-        <ion-icon size="large" class="icon_" name="play-circle-outline"></ion-icon>
-      </div>
-    </ion-col>
-    <ion-col size="8" class="col_list">
-      <ion-label class="lbl_">Lorem Ipsum is simply dummy text of the printing.</ion-label>
-    </ion-col>
-  </ion-row>
-
-  <ion-row class="row_list">
-    <ion-col size="4" class="col_list">
-      <div class="div_img">
-        <img src="../../assets/images/placeholder.png" class="imgVid"/>
-        <div class="layer"></div>
-        <ion-icon size="large" class="icon_" name="play-circle-outline"></ion-icon>
-      </div>
-    </ion-col>
-    <ion-col size="8" class="col_list">
-      <ion-label class="lbl_">Lorem Ipsum is simply dummy text of the printing.</ion-label>
+      <ion-label class="lbl_">{{item.title}}</ion-label>
     </ion-col>
   </ion-row>
 

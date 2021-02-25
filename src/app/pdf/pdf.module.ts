@@ -7,12 +7,14 @@ import { IonicModule } from '@ionic/angular';
 import { PdfPageRoutingModule } from './pdf-routing.module';
 
 import { PdfPage } from './pdf.page';
+import { PdfViewerModule } from 'ng2-pdf-viewer';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
+    PdfViewerModule,
     PdfPageRoutingModule
   ],
   declarations: [PdfPage]
