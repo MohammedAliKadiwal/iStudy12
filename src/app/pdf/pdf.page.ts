@@ -9,7 +9,9 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 })
 export class PdfPage implements OnInit {
 
-  constructor(
+  public pdfSrc = "https://vadimdez.github.io/ng2-pdf-viewer/assets/pdf-test.pdf";
+
+  constructor( 
     private statusBar: StatusBar,
     private navCtrl: NavController,
   ) { }
