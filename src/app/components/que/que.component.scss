@@ -27,29 +27,6 @@
     font-size: 16px;
     padding: 8px;
   }
-  .bullets_ {
-    padding: 0px 38px;
-    .lblSec {
-      display: block;
-      font-size: 16px;
-      font-family: "MuliBold";
-      color: var(--ion-color-medium);
-      padding: 16px 0px 4px 0px;
-    }
-    .bullet_ {
-      height: 48px;
-      width: 48px;
-      margin: 4px;
-      line-height: 3;
-      border-radius: 100%;
-      font-size: 16px;
-      text-align: center;
-      display: inline-block;
-      font-weight: bold;
-      color: var(--ion-color-primary-contrast);
-      background: var(--ion-color-light-shade);
-    }
-  }
 }
 .div_ {
   width: 18px;

@@ -1,47 +1,104 @@
-ion-content{
-    .div_seg{
-        background: var(--ion-color-primary-contrast);
+ion-content {
+  --padding-bottom: 16px;
+  .sticky_ {
+    --padding-start: 0px;
+    --inner-padding-end: 0px;
+    padding: 14px 0px 0px 0px;
+    background: var(--ion-color-primary-contrast);
+    border-bottom: 1px solid #ccc;
+    // box-shadow: 0 -5px 5px -5px #ccc;
+    .div_seg {
+      background: var(--ion-color-primary-contrast);
+      padding: 0px 16px;
+      width: 100%;
+      .seg_ {
         padding: 0px 16px;
-        width: 100%;
-        .seg_{
-            padding: 0px 16px;
-            .seg_btn{
-                --color:  var(--ion-color-medium);
-                --color-checked: var(--ion-color-secondary-contrast);
-                --indicator-color: var(--ion-color-primary);
-                --indicator-height: 2px;
-                --ripple-color: transparent;
-                font-size: 16px;
-                font-family: 'MuliBold';
-                text-transform: capitalize;
-                .lbl_no{
-                    font-size: 14px;
-                    --color:  var(--ion-color-medium);
-                    margin-top: 4px;
-                    margin-bottom: 6px;
-                    --color-checked: var(--ion-color-medium);
-                }
-            }
+        .seg_btn {
+          --color: var(--ion-color-medium);
+          --color-checked: var(--ion-color-secondary-contrast);
+          --indicator-color: var(--ion-color-primary);
+          --indicator-height: 2px;
+          --ripple-color: transparent;
+          font-size: 16px;
+          font-family: "MuliBold";
+          text-transform: capitalize;
+          .lbl_no {
+            font-size: 14px;
+            --color: var(--ion-color-medium);
+            margin-top: 4px;
+            margin-bottom: 6px;
+            --color-checked: var(--ion-color-medium);
+          }
         }
+      }
     }
-    .items_{
-        --padding-start: 0;
-        --inner-padding-end: 0;
-        --min-height: 68px;
-        border-bottom: 1px solid #ccc;
-        margin: 0 8px;
-        padding: 0 16px;
-        .lbl_{
-            display: block;
-            font-size: 16px;
-            font-family: 'MuliSemiBold';
+  }
+  .btn_more {
+    margin: 16px 24px;
+    --border-radius: 8px;
+    --border-color: var(--ion-color-medium);
+    font-family: "MuliBold";
+    font-size: 18px;
+    --background-activated: var(--ion-color-medium);
+  }
+  .row_key {
+    padding: 0 16px 16px 16px;
+    .col_key {
+      padding: 0;
+      .div_ans {
+        .lbl_key {
+          width: fit-content;
+          display: inline-block;
+          margin-right: 16px;
+          font-size: 24px;
+          font-family: "MuliBold";
+          padding: 0 0 16px 0;
+          vertical-align: super;
         }
-        .total{
-            display: block;
-            font-size: 16px;
-            text-align: right;
-            font-family: 'MuliBold';
-            flex: none;
+        .icon_arrow {
+          font-size: 20px;
+          margin-left: 8px;
         }
+        .lbl_icon {
+          font-size: 12px;
+          vertical-align: super;
+        }
+        .icon_ {
+          font-size: 28px;
+        }
+      }
     }
+  }
+}
+.lbl_head {
+  display: block;
+  font-size: 22px;
+  font-family: "MuliSemiBold";
+  padding: 16px 24px;
+}
+.items_ {
+  width: 100%;
+  --padding-start: 0;
+  --inner-padding-end: 0;
+  --min-height: 68px;
+  border-bottom: 1px solid #ccc;
+  margin: 0 8px;
+  padding: 0 16px;
+  .lbl_ {
+    display: block;
+    font-size: 16px;
+    font-family: "MuliBold";
+  }
+  .total {
+    display: block;
+    font-size: 16px;
+    text-align: right;
+    font-family: "MuliBold";
+    flex: none;
+  }
+}
+.lines {
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 2px 0 0 !important;
 }

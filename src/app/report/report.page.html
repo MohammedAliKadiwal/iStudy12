@@ -14,20 +14,39 @@
   <mat-accordion>
     <mat-expansion-panel class="exPanel">
       <mat-expansion-panel-header class="exPanelHeader">
-        <ion-badge class="exBadge">1</ion-badge>
-        <ion-label class="exLabel">Lorem ipsum Demo text</ion-label>
+        <ion-item lines="none" class="items_ lines">
+          <ion-icon name="timer-outline" slot="start"></ion-icon>
+          <ion-label class="lbl_">Score</ion-label>
+          <ion-label slot="end" class="total">11 / 100</ion-label>
+        </ion-item>
       </mat-expansion-panel-header>
-      <ion-item class="exItem_" lines="full" (click)="instruction()">
-        <ion-icon class="exIcon_" name="play-sharp"></ion-icon>
-        <ion-label class="exLbl_">Lorem ipsum Demo text</ion-label>
-      </ion-item>
-      <ion-item class="exItem_" lines="full" (click)="instruction()">
-        <ion-icon class="exIcon_" name="play-sharp"></ion-icon>
-        <ion-label class="exLbl_">Lorem ipsum Demo text</ion-label>
-      </ion-item>
+      <canvas #scoreBarChart></canvas>
     </mat-expansion-panel>
-    </mat-accordion>
 
+    <mat-expansion-panel class="exPanel">
+      <mat-expansion-panel-header class="exPanelHeader">
+        <ion-item lines="none" class="items_ lines">
+          <ion-icon name="disc-outline" slot="start"></ion-icon>
+          <ion-label class="lbl_">Accuracy</ion-label>
+          <ion-label slot="end" class="total">29.4%</ion-label>
+        </ion-item>
+      </mat-expansion-panel-header>
+      <canvas #accuracyBarChart></canvas>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel class="exPanel">
+      <mat-expansion-panel-header class="exPanelHeader">
+        <ion-item lines="none" class="items_ lines">
+          <ion-icon name="watch-outline" slot="start"></ion-icon>
+          <ion-label class="lbl_">Time</ion-label>
+          <ion-label slot="end" class="total">0s</ion-label>
+        </ion-item>
+      </mat-expansion-panel-header>
+      <canvas #timeBarChart></canvas>
+    </mat-expansion-panel>
+  </mat-accordion>
+
+  <ion-item-divider sticky class="sticky_">
     <div class="div_seg">
       <ion-segment [(ngModel)]="subjects" mode="md" class="seg_">
         <ion-segment-button value="maths" class="seg_btn">
@@ -48,39 +67,151 @@
         </ion-segment-button>
       </ion-segment>
     </div>
+  </ion-item-divider>
 
-    <div [ngSwitch]="subjects">
+  <div [ngSwitch]="subjects">
 
-      <div *ngSwitchCase="'maths'">
-        <ion-item lines="none" class="items_">
-          <ion-icon name="timer-outline" slot="start"></ion-icon>
-          <ion-label class="lbl_">Score</ion-label>
-          <ion-label slot="end" class="total">11 / 100</ion-label>
-        </ion-item>
-        <ion-item lines="none" class="items_">
-          <ion-icon name="watch-outline" slot="start"></ion-icon>
-          <ion-label class="lbl_">Score</ion-label>
-          <ion-label slot="end" class="total">11 / 100</ion-label>
-        </ion-item>
+    <div *ngSwitchCase="'maths'">
+      <ion-label class="lbl_head">Overall</ion-label>
+      <ion-item lines="none" class="items_">
+        <ion-icon name="timer-outline" slot="start"></ion-icon>
+        <ion-label class="lbl_">Score</ion-label>
+        <ion-label slot="end" class="total">11 / 100</ion-label>
+      </ion-item>
+      <ion-item lines="none" class="items_">
+        <ion-icon name="disc-outline" slot="start"></ion-icon>
+        <ion-label class="lbl_">Accuracy</ion-label>
+        <ion-label slot="end" class="total">29.4%</ion-label>
+        <ion-icon size="small" name="chevron-down" slot="end" (click)="modalSheet()"></ion-icon>
+      </ion-item>
+      <ion-item lines="none" class="items_">
+        <ion-icon name="watch-outline" slot="start"></ion-icon>
+        <ion-label class="lbl_">Time</ion-label>
+        <ion-label slot="end" class="total">0s</ion-label>
+      </ion-item>
+
+      <ion-label class="lbl_head">Chapters</ion-label>
+      <ion-row class="row_result">
+        <ion-col size="9" class="col_result">
+          <ion-label class="lbl_que">System of particles and rotational motion</ion-label>
+          <div class="div_result">
+            <ion-icon name="checkmark-circle" color="success" class="icon_"></ion-icon>
+            <ion-label class="lbl_no">1</ion-label>
+          </div>
+          <div class="div_result">
+            <ion-icon name="close-circle" color="danger" class="icon_"></ion-icon>
+            <ion-label class="lbl_no">1</ion-label>
+          </div>
+          <div class="div_result">
+            <ion-icon name="refresh-circle" color="medium" class="icon_"></ion-icon>
+            <ion-label class="lbl_no">1</ion-label>
+          </div>
+        </ion-col>
+        <ion-col size="3" class="col_result">
+          <ion-label class="lbl_total">4 / 4</ion-label>
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="row_result clr">
+        <ion-col size="9" class="col_result">
+          <ion-label class="lbl_que">System of particles and rotational motion</ion-label>
+          <div class="div_result">
+            <ion-icon name="checkmark-circle" color="success" class="icon_"></ion-icon>
+            <ion-label class="lbl_no">1</ion-label>
+          </div>
+          <div class="div_result">
+            <ion-icon name="close-circle" color="danger" class="icon_"></ion-icon>
+            <ion-label class="lbl_no">1</ion-label>
+          </div>
+          <div class="div_result">
+            <ion-icon name="refresh-circle" color="medium" class="icon_"></ion-icon>
+            <ion-label class="lbl_no">1</ion-label>
+          </div>
+        </ion-col>
+        <ion-col size="3" class="col_result">
+          <ion-label class="lbl_total">4 / 4</ion-label>
+        </ion-col>
+      </ion-row>
+
+      <ion-button class="btn_more" fill="outline" expand="block" (click)="chapters()">View more chapters (22)
+        <ion-icon name="chevron-forward"></ion-icon>
+      </ion-button>
+
+      <ion-label class="lbl_head">Difficulty Levels</ion-label>
+
+      <ion-label class="lbl_head">Question Type</ion-label>
+
+      <ion-label class="lbl_head">Answer Key</ion-label>
+      <ion-row class="row_key">
+        <ion-col size="4" class="col_key">
+          <div class="div_ans">
+            <ion-label class="lbl_key">5</ion-label>
+            <ion-icon class="icon_arrow" name="chevron-forward"></ion-icon>
+          </div>
+          <div class="div_ans">
+            <ion-icon class="icon_" name="checkmark-circle" color="success"></ion-icon>
+            <ion-label class="lbl_icon">Correct</ion-label>
+          </div>
+        </ion-col>
+        <ion-col size="4" class="col_key">
+          <div class="div_ans">
+            <ion-label class="lbl_key">12</ion-label>
+            <ion-icon class="icon_arrow" name="chevron-forward"></ion-icon>
+          </div>
+          <div class="div_ans">
+            <ion-icon class="icon_" name="close-circle" color="danger"></ion-icon>
+            <ion-label class="lbl_icon">Inorrect</ion-label>
+          </div>
+        </ion-col>
+        <ion-col size="4" class="col_key">
+          <div class="div_ans">
+            <ion-label class="lbl_key">8</ion-label>
+            <ion-icon class="icon_arrow" name="chevron-forward"></ion-icon>
+          </div>
+          <div class="div_ans">
+            <ion-icon class="icon_" name="refresh-circle" color="medium"></ion-icon>
+            <ion-label class="lbl_icon">Not Answered</ion-label>
+          </div>
+        </ion-col>
+      </ion-row>
+
+      <div class="bullets_">
+        <div class="bullet_ bgR">1</div>
+        <div class="bullet_ bgW">2</div>
+        <div class="bullet_ bgR">3</div>
+        <div class="bullet_ bgW">4</div>
+        <div class="bullet_ bgS">5</div>
+        <div class="bullet_ bgS">6</div>
+        <div class="bullet_ bgW">7</div>
+        <div class="bullet_ bgW">8</div>
+        <div class="bullet_ bgS">9</div>
+        <div class="bullet_ bgS">10</div>
+        <div class="bullet_ bgR">11</div>
+        <div class="bullet_ bgW">12</div>
+        <div class="bullet_ bgS">13</div>
+        <div class="bullet_ bgW">14</div>
+        <div class="bullet_ bgR">15</div>
+        <div class="bullet_ bgS">16</div>
+        <div class="bullet_ bgR">17</div>
+        <div class="bullet_ bgS">18</div>
+        <div class="bullet_ bgS">19</div>
+        <div class="bullet_ bgW">20</div>
       </div>
 
-      <div *ngSwitchCase="'chemistry'">        
-        <div class="empty_">
-          <ion-label class="lbl_empty">Chemistry</ion-label>
-        </div>
-      </div>
+    </div>
+    <!-- padding: 8px 28px;
+      background: var(--ion-color-success);
+      border-radius: 4px;
+      font-size: 16px;
+      color: var(--ion-color-primary-contrast); -->
+    <div *ngSwitchCase="'chemistry'">
+    </div>
 
-      <div *ngSwitchCase="'biology'">
-        <div class="empty_">
-          <ion-label class="lbl_empty">Biology</ion-label>
-        </div>
-      </div>
+    <div *ngSwitchCase="'biology'">
+    </div>
 
-      <div *ngSwitchCase="'physics'">        
-        <div class="empty_">
-          <ion-label class="lbl_empty">Physics</ion-label>
-        </div>
-      </div>
+    <div *ngSwitchCase="'physics'">
+    </div>
 
   </div>
 
